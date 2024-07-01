@@ -1,45 +1,38 @@
-import { NuklaiSDK } from '@nuklai/nuklai-sdk'
-import React, { useEffect, useState } from 'react'
-import { fetchHealthStatus, initializeSDK } from '../services/nuklaiService'
+import { NuklaiSDK } from "@nuklai/nuklai-sdk";
+import React, { useEffect, useState } from "react";
+import { fetchHealthStatus, initializeSDK } from "../services/nuklaiService";
+import { Props } from "./props";
 
-interface HealthStatusProps {
-  baseApiUrl: string
-  blockchainId: string
-}
-
-const HealthStatus: React.FC<HealthStatusProps> = ({
-  baseApiUrl,
-  blockchainId
-}) => {
-  const [healthStatus, setHealthStatus] = useState<boolean | null>(null)
-  const [loading, setLoading] = useState<boolean>(false)
-  const [error, setError] = useState<string | null>(null)
-  const [sdk, setSdk] = useState<NuklaiSDK | null>(null)
+const HealthStatus: React.FC<Props> = ({ baseApiUrl, blockchainId }) => {
+  const [healthStatus, setHealthStatus] = useState<boolean | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
+  const [sdk, setSdk] = useState<NuklaiSDK | null>(null);
 
   useEffect(() => {
-    const initializedSdk = initializeSDK(baseApiUrl, blockchainId)
-    setSdk(initializedSdk)
-  }, [baseApiUrl, blockchainId])
+    const initializedSdk = initializeSDK(baseApiUrl, blockchainId);
+    setSdk(initializedSdk);
+  }, [baseApiUrl, blockchainId]);
 
   useEffect(() => {
     if (sdk) {
       const getHealthStatus = async () => {
-        setLoading(true)
-        setError(null)
+        setLoading(true);
+        setError(null);
         try {
-          const status = await fetchHealthStatus(sdk)
-          setHealthStatus(status.success)
+          const status = await fetchHealthStatus(sdk);
+          setHealthStatus(status.success);
         } catch (error) {
-          setError('Failed to fetch Health Status')
-          console.error(error)
+          setError("Failed to fetch Health Status");
+          console.error(error);
         } finally {
-          setLoading(false)
+          setLoading(false);
         }
-      }
+      };
 
-      getHealthStatus()
+      getHealthStatus();
     }
-  }, [sdk])
+  }, [sdk]);
 
   return (
     <div>
@@ -50,7 +43,7 @@ const HealthStatus: React.FC<HealthStatusProps> = ({
         <pre>{JSON.stringify(healthStatus, null, 2)}</pre>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default HealthStatus
+export default HealthStatus;
