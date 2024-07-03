@@ -1,4 +1,4 @@
-import { auth, common, utils } from '@nuklai/hyperchain-sdk'
+import { HyperchainSDK, auth, common, utils } from '@nuklai/hyperchain-sdk'
 import { NuklaiSDK, actions, common as commonNuklai } from '@nuklai/nuklai-sdk'
 
 export const initializeSDK = (baseApiUrl: string, blockchainId: string) => {
@@ -8,8 +8,18 @@ export const initializeSDK = (baseApiUrl: string, blockchainId: string) => {
   })
 }
 
+export const initializeSDKHyper = (
+  baseApiUrl: string,
+  blockchainId: string
+) => {
+  return new HyperchainSDK({
+    baseApiUrl,
+    blockchainId
+  })
+}
+
 export const fetchHealthStatus = async (
-  sdk: NuklaiSDK
+  sdk: HyperchainSDK
 ): Promise<common.PingResponse> => {
   try {
     const healthStatus = await sdk.rpcService.ping()
