@@ -481,20 +481,9 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@nuklai/hyperchain-sdk@^0.1.9":
+"@nuklai/hyperchain-sdk@^0.1.9", "@nuklai/hyperchain-sdk@https://github.com/nuklai/hyperchain-js-sdk#3db227f":
   version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@nuklai/hyperchain-sdk/-/hyperchain-sdk-0.1.9.tgz#a79b2b191259275da040e62f4f2f43365b0081e6"
-  integrity sha512-qd6pfFu5zMam0HQKn+ypq32ZkPHzFkbeyDzRvJmHLCKr/Msqy4QNZKm10yTxxF155SvYe1taZqwSW/Hxg5MRnQ==
-  dependencies:
-    "@avalabs/avalanchejs" "^4.0.5"
-    "@noble/curves" "^1.4.0"
-    "@noble/ed25519" "^2.1.0"
-    bech32 "^2.0.0"
-    big-integer "^1.6.52"
-
-"@nuklai/hyperchain-sdk@https://github.com/nuklai/hyperchain-js-sdk#9ad991a":
-  version "0.1.9"
-  resolved "https://github.com/nuklai/hyperchain-js-sdk#9ad991a4fabee684f12c081ce57b8929ba59c9c9"
+  resolved "https://github.com/nuklai/hyperchain-js-sdk#3db227f3bfe71fcdfe9c00672f54f8571e557818"
   dependencies:
     "@avalabs/avalanchejs" "^4.0.5"
     "@noble/curves" "^1.4.0"

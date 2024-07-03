@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@nuklai/hyperchain-sdk": "https://github.com/nuklai/hyperchain-js-sdk#9ad991a",
+    "@nuklai/hyperchain-sdk": "https://github.com/nuklai/hyperchain-js-sdk#3db227f",
     "@nuklai/nuklai-sdk": "^0.1.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
