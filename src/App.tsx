@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
+import BlockDetails from './components/BlockDetails'
 import HealthStatus from './components/HealthStatus'
 import NetworkInfo from './components/NetworkInfo'
 import TransferTransaction from './components/TransferTransaction'
@@ -44,11 +45,18 @@ function App() {
           <NetworkInfo baseApiUrl={baseApiUrl} blockchainId={blockchainId} />
         </div>
       </div>
-      <div className='transfer-card'>
-        <TransferTransaction
-          baseApiUrl={baseApiUrl}
-          blockchainId={blockchainId}
-        />
+      <div className='card-container'>
+        <div className='transfer-card'>
+          <BlockDetails baseApiUrl={baseApiUrl} blockchainId={blockchainId} />
+        </div>
+      </div>
+      <div className='card-container'>
+        <div className='transfer-card'>
+          <TransferTransaction
+            baseApiUrl={baseApiUrl}
+            blockchainId={blockchainId}
+          />
+        </div>
       </div>
     </div>
   )
