@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import {
   initializeSDK,
   sendTransferTransaction
+  // sendTransferTransactionViaWebSocket
 } from '../services/nuklaiService'
 
 interface TransferTransactionProps {
@@ -38,6 +39,16 @@ const TransferTransaction: React.FC<TransferTransactionProps> = ({
         parseFloat(amount),
         memo
       )
+      // NOTE: You can also use sendTransferTransactionViaWebSocket function
+      /*      const id = await sendTransferTransactionViaWebSocket(
+        sdk,
+        privateKey,
+        keyType,
+        receiverAddress,
+        assetID,
+        parseFloat(amount),
+        memo
+      ) */
       setTxID(id)
     } catch (error) {
       console.error(error)

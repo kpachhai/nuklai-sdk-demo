@@ -1,9 +1,6 @@
 import { HyperchainSDK } from '@nuklai/hyperchain-sdk'
 import React, { useEffect, useState } from 'react'
-import {
-  fetchHealthStatus,
-  initializeSDKHyper
-} from '../services/nuklaiService'
+import { fetchHealthStatus, initializeSDK } from '../services/nuklaiService'
 
 interface HealthStatusProps {
   baseApiUrl: string
@@ -20,7 +17,7 @@ const HealthStatus: React.FC<HealthStatusProps> = ({
   const [sdk, setSdk] = useState<HyperchainSDK | null>(null)
 
   useEffect(() => {
-    const initializedSdk = initializeSDKHyper(baseApiUrl, blockchainId)
+    const initializedSdk = initializeSDK(baseApiUrl, blockchainId)
     setSdk(initializedSdk)
   }, [baseApiUrl, blockchainId])
 
@@ -30,7 +27,6 @@ const HealthStatus: React.FC<HealthStatusProps> = ({
         setLoading(true)
         setError(null)
         try {
-          await sdk.wsService.connect()
           const status = await fetchHealthStatus(sdk)
           setHealthStatus(status.success)
         } catch (error) {

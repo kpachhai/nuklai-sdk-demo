@@ -481,9 +481,9 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@nuklai/hyperchain-sdk@^0.1.9", "@nuklai/hyperchain-sdk@https://github.com/nuklai/hyperchain-js-sdk#3db227f":
+"@nuklai/hyperchain-sdk@https://github.com/nuklai/hyperchain-js-sdk#9791fc1":
   version "0.1.9"
-  resolved "https://github.com/nuklai/hyperchain-js-sdk#3db227f3bfe71fcdfe9c00672f54f8571e557818"
+  resolved "https://github.com/nuklai/hyperchain-js-sdk#9791fc1cad7f96e4246deff0a1e63d3184f292c6"
   dependencies:
     "@avalabs/avalanchejs" "^4.0.5"
     "@noble/curves" "^1.4.0"
@@ -493,15 +493,37 @@
     lodash "^4.17.21"
     ws "^8.17.1"
 
-"@nuklai/nuklai-sdk@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@nuklai/nuklai-sdk/-/nuklai-sdk-0.1.4.tgz#4db9e52baa13594ffcbbce29ea59aa9f29fe6b5f"
-  integrity sha512-IpZgXUDoKNWdkboo4vuDHevP4eW7GDfCbrNku9ffNW8aFc5zuJa4WtUH/M3hz9QEp4YO91huvFNrTeadjpSq1Q==
+"@nuklai/hyperchain-sdk@https://github.com/nuklai/hyperchain-js-sdk#a5d4de0":
+  version "0.1.9"
+  resolved "https://github.com/nuklai/hyperchain-js-sdk#a5d4de0b652029fc85329de04cec9f185185b434"
   dependencies:
     "@avalabs/avalanchejs" "^4.0.5"
     "@noble/curves" "^1.4.0"
     "@noble/ed25519" "^2.1.0"
-    "@nuklai/hyperchain-sdk" "^0.1.9"
+    bech32 "^2.0.0"
+    big-integer "^1.6.52"
+    lodash "^4.17.21"
+    ws "^8.17.1"
+
+"@nuklai/nuklai-sdk@https://github.com/nuklai/nuklai-js-sdk#1d3bc8d":
+  version "0.1.4"
+  resolved "https://github.com/nuklai/nuklai-js-sdk#1d3bc8df594ff1c85c9f8b9dec1ce670e79b7716"
+  dependencies:
+    "@avalabs/avalanchejs" "^4.0.5"
+    "@noble/curves" "^1.4.0"
+    "@noble/ed25519" "^2.1.0"
+    "@nuklai/hyperchain-sdk" "https://github.com/nuklai/hyperchain-js-sdk#9791fc1"
+    bech32 "^2.0.0"
+    big-integer "^1.6.52"
+
+"@nuklai/nuklai-sdk@https://github.com/nuklai/nuklai-js-sdk#4e59265":
+  version "0.1.4"
+  resolved "https://github.com/nuklai/nuklai-js-sdk#4e5926573366c8798790f65def07547522e2ed5b"
+  dependencies:
+    "@avalabs/avalanchejs" "^4.0.5"
+    "@noble/curves" "^1.4.0"
+    "@noble/ed25519" "^2.1.0"
+    "@nuklai/hyperchain-sdk" "https://github.com/nuklai/hyperchain-js-sdk#a5d4de0"
     bech32 "^2.0.0"
     big-integer "^1.6.52"
 
