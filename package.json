@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@avalabs/avalanchejs": "^4.0.5",
-    "@nuklai/hyperchain-sdk": "https://github.com/nuklai/hyperchain-js-sdk#a5d4de0",
+    "@nuklai/hyperchain-sdk": "https://github.com/nuklai/hyperchain-js-sdk#d56d9a8",
     "@nuklai/nuklai-sdk": "https://github.com/nuklai/nuklai-js-sdk#4e59265",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
