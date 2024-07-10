@@ -10,8 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@nuklai/hyperchain-sdk": "^0.1.9",
-    "@nuklai/nuklai-sdk": "^0.1.4",
+    "@avalabs/avalanchejs": "^4.0.5",
+    "@nuklai/hyperchain-sdk": "^0.2.0",
+    "@nuklai/nuklai-sdk": "^0.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
