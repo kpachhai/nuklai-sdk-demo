@@ -90,7 +90,7 @@ export const sendTransferTransactionViaWebSocket = async (
 
     await sdk.wsServiceNuklai.close()
 
-    return txID.toString()
+    return txID
   } catch (error) {
     console.error('Failed to send transfer transaction:', error)
     throw new Error(`Failed to send transfer transaction: ${error}`)

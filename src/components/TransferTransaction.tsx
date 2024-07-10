@@ -25,9 +25,11 @@ const TransferTransaction: React.FC<TransferTransactionProps> = ({
   const [amount, setAmount] = useState<string>('0.00001')
   const [memo, setMemo] = useState<string>('test transaction')
   const [txID, setTxID] = useState<string | null>(null)
+  const [error, setError] = useState<string | null>(null)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setError(null) // Reset error state
     try {
       const sdk = initializeSDK(baseApiUrl, blockchainId)
       const id = await sendTransferTransaction(
@@ -51,13 +53,17 @@ const TransferTransaction: React.FC<TransferTransactionProps> = ({
       ) */
       setTxID(id)
     } catch (error) {
+      setError(
+        `Failed to send transfer transaction: ${JSON.stringify(error, null, 2)}`
+      )
       console.error(error)
     }
   }
 
   return (
-    <div className='transfer-card'>
+    <div>
       <h2>Send Transfer Transaction</h2>
+      {error && <div>Error: {error}</div>}
       <form onSubmit={handleSubmit}>
         <div className='form-group'>
           <label>Private Key</label>
